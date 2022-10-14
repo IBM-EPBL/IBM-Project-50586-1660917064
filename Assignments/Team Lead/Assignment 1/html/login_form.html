@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contamination Zone Detection</title>
+        <script >function toggle(){
+            console.log("test");
+            var x = document.getElementById("signup_form");
+            var y = document.getElementById("signin_form");
+            if(x.style.display=="none"){
+                y.style.display = "none";
+                x.style.display = "block";
+            }
+            else{
+                x.style.display = "none";
+                y.style.display="block";
+            }
+        }
+        </script>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <div class="body_container" >
+            <center>
+                <br>
+                <div class="forms_container" id="forms_id" >
+                    <div class="signin_container"id="signin_form">
+                    <h1>SIGN IN</h1>
+                    <b>NEW USER <input type="button" onclick="toggle()" name="submit" value="signup"/></b> 
+                    <br><br>
+                    <form id="signin_form" action="../php/login.php" method="POST">
+                    <table >
+                        <tr>
+                            <th>USER NAME</th><td><input type="text" name="username" placeholder="username" required></td>
+                        </tr>
+                        <tr>
+                            <th>PASSWORD</th><td><input type="password" name="password" placeholder="password" required></td>
+                        </tr>
+                        <tr>
+                            <th></th><td><input type="submit" name="" value="signin" onclick='<script>document.getElementById("signin_form").reset(); </script>'></td>
+                        </tr>
+                        <tr>
+                            
+                        </tr>
+                    </table>
+                    </form> 
+                    </div>
+            <div class="signup_container" id="signup_form" style="display: none;">
+            <h1>Registration Form</h1>
+            <p>Already registered User?<input type="button" onclick="toggle()" name="submit" value="signin"></p>
+            </br>
+            <form id="signup_form"action="../php/signup.php" method="POST">
+            <table aria-colspan="2">
+                <tr>
+                    <th>NAME</th><td><input type="text" name="name" placeholder="name" required></td>
+                </tr>
+                <tr>
+                    <th>AGE</th><td><input type="number" name="age" placeholder="age" required></td>
+                </tr>
+                <tr>
+                    <th>GENDER</th>
+                    <td ><input type="radio" id="male" name="gender" value="male" colspan="3"><label for="male" required>Male</label>
+                    <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other"><label for="other">Other</label></td>
+                </tr>
+                <tr>
+                    <th>EMAIL ID</th><td><input type="email" name="email" placeholder="xyz@gmail.com" required></td>
+                </tr>
+                <tr>
+                    <th>CONTACT</th><td><input type="number" name="contact" placeholder="123456789" required></td>
+                </tr>
+                <tr>
+                    <th>CITY</th><td><input type="text" name="address" placeholder="Chennai" required></td>
+                </tr>
+                <tr>
+                    <th>STATE</th><td><input type="number" name="contact" placeholder="Tamilnadu" required></td>
+                </tr>
+                <tr>
+                    <th>COUNTRY</th><td><input type="number" name="contact" placeholder="India" required></td>
+                </tr>
+                <tr>
+                    <th>PINCODE</th><td><input type="number" name="contact" placeholder="123456789" required></td>
+                </tr>
+                <tr>
+                    <th>USERNAME</th><td><input type="text" name="username" placeholder="username" required></td>
+                </tr>
+                <tr>
+                    <th>PASSWORD</th><td><input type="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <th></th><td><input type="submit" onclick='<script>document.getElementById("signup_form").reset(); </script>' name="" value="signup"></td>
+                </tr>                                                                   
+            </table>
+            </form>
+            </div>
+        </div><br><br><br><br>
+        </center>
+    </body>
+</html>
